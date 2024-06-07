@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">YieldSage</string>
+
+    <string name="login_title">Welcome To YieldSage</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="name">name</string>
+    <string name="login">Login</string>
+    <string name="login_with_google">Login With Google</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="register_title">Register To YieldSage</string>
+    <string name="register_with_google">Register With Google</string>
+    <string name="profile_wlcm">Welcome,</string>
+    <string name="menu_icon">menu icon</string>
+</resources>
