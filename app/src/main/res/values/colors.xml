@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="gray_tint">#80BEBEBE</color>
+
+    <color name="pastel_yellow">#F3FF90</color>
+    <color name="green_leaf">#059212</color>
 </resources>

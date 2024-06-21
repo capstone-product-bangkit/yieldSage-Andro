@@ -21,6 +21,7 @@ class UserPreference private constructor(val dataStore: DataStore<Preferences>) 
         dataStore.edit { preferences ->
             preferences[ID_KEY] = user.userId
             preferences[NAME_KEY] = user.name
+            preferences[EMAIL_KEY] = user.email
             preferences[TOKEN_KEY] = user.token
             preferences[IS_LOGIN_KEY] = true
         }
@@ -31,6 +32,7 @@ class UserPreference private constructor(val dataStore: DataStore<Preferences>) 
             UserModel(
                 preferences[ID_KEY] ?: "",
                 preferences[NAME_KEY] ?: "",
+                preferences[EMAIL_KEY] ?: "",
                 preferences[TOKEN_KEY] ?: "",
                 preferences[IS_LOGIN_KEY] ?: false
 
@@ -43,6 +45,11 @@ class UserPreference private constructor(val dataStore: DataStore<Preferences>) 
         return userModel.isLogin
     }
 
+    suspend fun getUserName(): String{
+        val userModel = getSession().first()
+        return userModel.name
+    }
+
     suspend fun logout() {
         dataStore.edit { preferences ->
             preferences.clear()
@@ -52,6 +59,7 @@ class UserPreference private constructor(val dataStore: DataStore<Preferences>) 
     companion object {
         private val ID_KEY = stringPreferencesKey("userId")
         private val NAME_KEY = stringPreferencesKey("name")
+        private val EMAIL_KEY = stringPreferencesKey("email")
         private val TOKEN_KEY = stringPreferencesKey("token")
         private val IS_LOGIN_KEY = booleanPreferencesKey("isLogin")
 

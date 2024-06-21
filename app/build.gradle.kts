@@ -16,7 +16,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "BASE_URL", "\"DisiniAPIlink\"")
+        buildConfigField("String", "BASE_URL", "\"https://yieldsage-backend-v2-27adm7gv2q-et.a.run.app/\"")
     }
 
     buildTypes {
@@ -60,6 +60,10 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.1")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1")
     implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.fragment:fragment-ktx:1.7.1")
+
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 
     implementation ("com.google.android.gms:play-services-auth:21.2.0")
 }

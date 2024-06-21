@@ -8,6 +8,7 @@ import kotlinx.parcelize.Parcelize
 data class UserModel(
     var userId: String,
     var name: String,
+    var email: String,
     var token: String,
     var isLogin: Boolean = false
 ):Parcelable
